@@ -1,0 +1,94 @@
+---
+driver:
+  name: dokken
+  chef_version: 14.0.210
+  privileged: true
+
+provisioner:
+  name: dokken
+  # chef_log_level: info
+
+transport:
+  name: dokken
+
+verifier:
+  name: inspec
+  # output: reports/%{platform}_%{suite}_inspec.xml
+
+platforms:
+  - name: debian-9
+    driver:
+      image: dokken/debian-9
+      pid_one_command: /bin/systemd
+    run_list:
+      - recipe[apt]
+
+  - name: debian-10
+    driver:
+      image: dokken/debian-10
+      pid_one_command: /bin/systemd
+    run_list:
+      - recipe[apt]
+
+  - name: ubuntu-16
+    driver:
+      image: dokken/ubuntu-16.04
+      pid_one_command: /bin/systemd
+    run_list:
+      - recipe[apt]
+
+  - name: centos-7
+    driver:
+      image: dokken/centos-7
+      pid_one_command: /usr/lib/systemd/systemd
+    run_list:
+      - recipe[yum]
+
+suites:
+  - name: 36x
+    run_list:
+      - recipe[mongodb-lib-test::default]
+      - recipe[mongodb-lib-test::replicaset_builder]
+      - recipe[mongodb-lib-test::shard_builder]
+    verifier:
+      inspec_tests:
+        - path: test/inspec/cluster
+        - path: test/inspec/packages
+      attributes:
+        mongodb_package_version: 3.6.17
+    attributes:
+      mongodb:
+        lib:
+          version: 3.6.17
+
+  - name: 40x
+    run_list:
+      - recipe[mongodb-lib-test::default]
+      - recipe[mongodb-lib-test::replicaset_builder]
+      - recipe[mongodb-lib-test::shard_builder]
+    verifier:
+      inspec_tests:
+        - path: test/inspec/cluster
+        - path: test/inspec/packages
+      attributes:
+        mongodb_package_version: 4.0.16
+    attributes:
+      mongodb:
+        lib:
+          version: 4.0.16
+
+  - name: 42x
+    run_list:
+      - recipe[mongodb-lib-test::default]
+      - recipe[mongodb-lib-test::replicaset_builder]
+      - recipe[mongodb-lib-test::shard_builder]
+    verifier:
+      inspec_tests:
+        - path: test/inspec/cluster
+        - path: test/inspec/packages
+      attributes:
+        mongodb_package_version: 4.2.2
+    attributes:
+      mongodb:
+        lib:
+          version: 4.2.2

@@ -1,0 +1,50 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  DefaultFormatter: fuubar
+  DisplayCopNames: true
+  Exclude:
+    - .berkshelf/**/*
+    - test/**/*
+    - spec/**/*
+    - Gemfile
+    - Guardfile
+
+Encoding:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+NumericLiterals:
+  Enabled: false
+
+HashSyntax:
+  Enabled: false
+
+RescueModifier:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 60
+
+Metrics/BlockLength:
+  Max: 60
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+# Some chef-client has ruby < 2.3.0
+Style/SafeNavigation:
+  Enabled: false

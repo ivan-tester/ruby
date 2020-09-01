@@ -1,0 +1,127 @@
+# OS generated files #
+######################
+.DS_Store
+Icon?
+nohup.out
+ehthumbs.db
+Thumbs.db
+
+# SASS #
+########
+.sass-cache
+
+# EDITORS #
+###########
+\#*
+.#*
+*~
+*.sw[a-z]
+*.bak
+REVISION
+TAGS*
+tmtags
+*_flymake.*
+*_flymake
+*.tmproj
+.project
+.settings
+mkmf.log
+
+## COMPILED ##
+##############
+a.out
+*.o
+*.pyc
+*.so
+*.com
+*.class
+*.dll
+*.exe
+*/rdoc/
+
+# Testing #
+###########
+.watchr
+.rspec
+spec/*
+test/*
+features/*
+examples/*
+Guardfile
+Procfile
+.kitchen*
+.rubocop.yml
+spec/*
+Rakefile
+.travis.yml
+.foodcritic
+.codeclimate.yml
+
+# RVM
+.ruby-version
+
+# SCM #
+#######
+.git
+*/.git
+.gitignore
+.gitmodules
+.gitconfig
+.gitattributes
+.svn
+*/.bzr/*
+*/.hg/*
+*/.svn/*
+
+# Berkshelf #
+#############
+Berksfile
+Berkshelf.lock
+.berkshelf/
+cookbooks/*
+tmp
+
+# Policyfile #
+##############
+Policyfile.rb
+Policyfile.lock.json
+
+# Cookbooks #
+#############
+CONTRIBUTING*
+CHANGELOG*
+TESTING*
+MAINTAINERS.toml
+
+# Strainer #
+############
+Colanderfile
+Strainerfile
+.colander
+.strainer
+
+# Vagrant #
+###########
+.vagrant
+Vagrantfile
+
+# Travis #
+##########
+.travis.yml
+
+# Kitchen #
+###########
+.kitchen/
+.kitchen*.yml
+
+# Reports #
+###########
+reports/
+
+# Yardocs #
+###########
+.yardoc/
+
+# Gemfile
+Gemfile
+Gemfile.lock

@@ -1,0 +1,32 @@
+* Scale Up Down
+** Add shard/remove shard
+** Shard names/numeration/iteration
+* Kitchen
+** VirtualBox/Vagrant
+*** Blocker Issues
+** Docker
+*** Init system is down
+* Cluster discovery
+** Name?
+** Build through list of environments
+** Hidden replicas for backup
+* Tips
+** Do not use secondary reads to scale overall read throughput. // why?
+** Noop disk scheduler
+** transparent huge pages
+** XFS
+** fs atime
+** limits
+** https://docs.mongodb.com/manual/reference/replica-configuration/#rsconf.settings.electionTimeoutMillis / https://docs.mongodb.com/manual/reference/replica-configuration/#rsconf.protocolVersion
+** For configs sharding.clusterRole: configsvr
+** 3.2.8 - Debian Jessie Packages
+* Ops Manager as Standalone cookbook
+* Gem load
+** Require bundler/setup to have exact gem set or use gem 'name', 'version'
+* Parts
+** Install
+*** Based on OS
+*** Install method:
+**** Disable default
+*** Service
+** Daemons configs and folders

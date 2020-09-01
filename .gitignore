@@ -1,0 +1,24 @@
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+pkg/
+.vagrant
+
+# Bundler
+bin/*
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml
+.kitchen.list.yml
+
+.berkshelf/
+reports/
+.yardoc/
+Berksfile.lock
+Gemfile.lock
+rvm.env
+

@@ -1,0 +1,102 @@
+{
+  "name": "spec-replicaset-primary",
+  "chef_environment": "_default",
+  "run_list": [],
+  "default": {},
+  "automatic": {
+    "ipaddress": "172.18.0.2",
+    "os": "linux",
+    "lsb": {
+      "id": "Debian",
+      "description": "Debian GNU/Linux 8.9 (jessie)",
+      "release": "8.9",
+      "codename": "jessie"
+    },
+    "platform": "debian",
+    "platform_version": "8.9",
+    "platform_family": "debian",
+    "root_group": "root",
+    "current_user": "root",
+    "hostname": "spec-replicaset-primary",
+    "machinename": "spec-replicaset-primary",
+    "fqdn": "spec-replicaset-primary",
+    "init_package": "systemd",
+    "mongodb": {
+      "lib": {
+        "discovery": {
+          "spec-config": {
+            "mongodb-config-primary": {
+              "_id": 0,
+              "host": "FAUXHAI.LOCAL:27019"
+            },
+            "mongodb-config-secondary": {
+              "_id": 1,
+              "host": "FAUXHAI.LOCAL:29019"
+            },
+            "mongodb-config-tertiary": {
+              "_id": 2,
+              "host": "FAUXHAI.LOCAL:30019",
+              "arbiterOnly": true
+            }
+          },
+          "spec-sh-000": {
+            "mongodb-sh-000-primary": {
+              "_id": 0,
+              "host": "fauxhai.local:27018"
+            },
+            "mongodb-sh-000-secondary": {
+              "_id": 1,
+              "host": "fauxhai.local:29018"
+            },
+            "mongodb-sh-000-arbiter": {
+              "_id": 2,
+              "host": "fauxhai.local:30018",
+              "arbiterOnly": true
+            },
+            "mongodb-sh-000-hidden": {
+              "_id": 3,
+              "host": "fauxhai.local:31018",
+              "priority": 0,
+              "hidden": true
+            },
+            "mongodb-sh-000-delayed": {
+              "_id": 4,
+              "host": "fauxhai.local:32018",
+              "priority": 0,
+              "hidden": true,
+              "slaveDelay": 3600
+            }
+          },
+          "spec-sh-001": {
+            "mongodb-sh-001-primary": {
+              "_id": 4,
+              "host": "fauxhai.local:33018"
+            },
+            "mongodb-sh-001-secondary": {
+              "_id": 3,
+              "host": "fauxhai.local:34018"
+            },
+            "mongodb-sh-001-arbiter": {
+              "_id": 2,
+              "host": "fauxhai.local:35018",
+              "arbiterOnly": true
+            },
+            "mongodb-sh-001-hidden": {
+              "_id": 1,
+              "host": "fauxhai.local:36018",
+              "priority": 0,
+              "hidden": true
+            },
+            "mongodb-sh-001-delayed": {
+              "_id": 0,
+              "host": "fauxhai.local:37018",
+              "priority": 0,
+              "hidden": true,
+              "slaveDelay": 3600
+            }
+          }
+        }
+      }
+    }
+  }
+}
